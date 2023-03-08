@@ -1,6 +1,3 @@
-<?php
-include('valida-sessao.php');
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,7 +20,7 @@ include('valida-sessao.php');
       top: 0;
       /* opacity: 0.4; */
       /* filter: blur(4px); */
-      background-image: url('./login/clinica.jpg');
+      background-image: url('clinica.jpg');
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -38,7 +35,7 @@ include('valida-sessao.php');
         <form class="form-inline">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" style="color: #fff" href="./login/index.php">Sair</a>
+                    <a class="nav-link" style="color: #fff" href="index.php">Sair</a>
                 </li>
             </ul>
         </form>
@@ -55,8 +52,8 @@ include('valida-sessao.php');
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                 aria-expanded="false">Cadastro</a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="./cadastropaciente/index.php">Cadastrar Paciente</a>
-                <a class="dropdown-item" href="./cadastromedico/index.php">Cadastrar Médico</a>
+                <a class="dropdown-item" href="../cadastropaciente/index.php">Cadastrar Paciente</a>
+                <a class="dropdown-item" href="../cadastromedico/index.php">Cadastrar Médico</a>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                 aria-expanded="false">Agenda</a>

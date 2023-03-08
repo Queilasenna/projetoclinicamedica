@@ -1,6 +1,4 @@
-<?php
-include('valida-sessao.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,11 +44,11 @@ margin-right: 40px;
   </div>
 
   <nav class="navbar navbar-light" style="background-color: #0f3e96;">
-    <a class="navbar-brand" style="color: #fff" href="../home.php">JGPQ</a>
+    <a class="navbar-brand" style="color: #fff" href="../login/home.php">JGPQ</a>
     <form class="form-inline">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" style="color: #fff" href="../home.php">Início</a>
+                <a class="nav-link" style="color: #fff" href="../login/home.php">Início</a>
             </li>
         </ul>
     </form>
@@ -69,7 +67,7 @@ margin-right: 40px;
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
             aria-expanded="false">Agenda</a>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Agendar Consulta</a>
+            <a class="dropdown-item" href="../agenda/agenda.php">Agendar Consulta</a>
             <a class="dropdown-item" href="#">Pacientes Agendados</a>
             <!-- <a class="dropdown-item" href="#">Controle de Pacientes</a> -->
             <!-- <a class="dropdown-item" href="#">Histórico de Consultas</a> -->

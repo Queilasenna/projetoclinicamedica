@@ -1,5 +1,5 @@
 <?php
-include('valida-sessao.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -47,11 +47,11 @@ include('valida-sessao.php');
   </div>
 
   <nav class="navbar navbar-light" style="background-color: #0f3e96;">
-    <a class="navbar-brand" style="color: #fff" href="../home.php">JGPQ</a>
+    <a class="navbar-brand" style="color: #fff" href="../login/home.php">JGPQ</a>
     <form class="form-inline">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" style="color: #fff" href="../home.php">Início</a>
+          <a class="nav-link" style="color: #fff" href="../login/home.php">Início</a>
         </li>
       </ul>
     </form>
@@ -125,7 +125,7 @@ include('valida-sessao.php');
 
       <div class="form-group col-md-2">
         <label>Situação</label>
-        <select class="form-control" name="tipoSituacao" id="tipoSituacao">
+        <select class="form-control" name="tipoSituacao" id="situacao">
           <option value="A">Ativo</option>
           <option value="I">Inativo</option>
         </select>
@@ -173,11 +173,11 @@ include('valida-sessao.php');
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity">Cidade</label>
-        <input type="text" class="form-control" id="inputCity">
+        <input type="text" class="form-control" id="cidade">
       </div>
       <div class="form-group col-md-4">
         <label for="inputEstado">Estado</label>
-        <select id="inputEstado" class="form-control">
+        <select id="estado" class="form-control">
           <option selected>Escolher...</option>
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>
@@ -211,7 +211,7 @@ include('valida-sessao.php');
       </div>
       <div class="form-group col-md-2">
         <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="inputCEP">
+        <input type="text" class="form-control" id="cep">
       </div>
     </div>
 
