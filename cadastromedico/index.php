@@ -64,8 +64,8 @@ session_start();
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
         aria-expanded="false">Cadastro</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="../cadastropaciente/index.php">Cadastrar Paciente</a>
-        <a class="dropdown-item" href="index.php">Cadastrar Médico</a>
+        <a class="dropdown-item" href="../cadastropaciente/formulario.php">Cadastrar Paciente</a>
+        <a class="dropdown-item" href="formulario.php">Cadastrar Médico</a>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
         aria-expanded="false">Agenda</a>
@@ -88,135 +88,8 @@ session_start();
     </li>
   </ul>
   <br>
-  <h1> Cadastro Médico</h1><br><br>
-  <!-- FINAL DAS ABAS -->
-
-  <form>
-    <div class="form-row">
-      <div class="form-group col-md-5">
-        <label for="nome">Nome Completo</label>
-        <input type="text" class="form-control" id="nome" placeholder="Ex: Patrícia Senna">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="datanasc">Data de Nascimento</label>
-        <input type="date" class="form-control" id="datanasc" placeholder="">
-      </div>
-      <div class="form-group col-md-3">
-        <label for="cpf">CPF</label>
-        <input type="text" class="form-control" id="cpf" placeholder="Ex: 40492175492">
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group col-md-3">
-        <label for="email">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="Ex: patricia94@...">
-      </div>
-
-      <div class="form-group col-md-2">
-        <label for="tel">Telefone</label>
-        <input type="tel" class="form-control" id="tel" placeholder="18 4004-8922 ">
-      </div>
-
-      <div class="form-group col-md-2">
-        <label for="crm">CRM</label>
-        <input type="text" class="form-control" id="crm" placeholder="Digite o CRM">
-      </div>
-
-      <div class="form-group col-md-2">
-        <label>Situação</label>
-        <select class="form-control" name="tipoSituacao" id="situacao">
-          <option value="A">Ativo</option>
-          <option value="I">Inativo</option>
-        </select>
-      </div>
-      <div class="form-group col-md-3">
-        <label>Especialidade:</label>
-        <select class="form-control" name="especialidade" id="especialidade">
-          <option value="">Todas</option>
-          <option value="1">Anestesiologia</option>
-          <option value="2">Cancerologia</option>
-          <option value="3">Cardiologia</option>
-          <option value="4">Cirurgia Geral</option>
-          <option value="5">Clinico Geral</option>
-          <option value="6">Cirurgia Plastica</option>
-          <option value="7">Coloproctologia</option>
-          <option value="8">Dermatologia</option>
-          <option value="9">Endocrinologia</option>
-          <option value="10">Gastroenterologia</option>
-          <option value="11">Geriatria</option>
-          <option value="12">Ginecologia Obstetricia</option>
-          <option value="13">Hematologia</option>
-          <option value="14">Mastologia</option>
-          <option value="15">Neurologia</option>
-          <option value="16">Oftalmologia</option>
-          <option value="17">Ortopedia</option>
-          <option value="18">Pediatria</option>
-          <option value="19">Psquiatria</option>
-          <option value="20">Urologia</option>
-        </select>
-        <!-- <button type="button" class="limpaArea">Limpar</button> -->
-      </div>
-    </div>
-    </div>
-
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="rua">Rua</label>
-        <input type="text" class="form-control" id="rua" placeholder="Ex: Rua Afonso Pena, nº47 ">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="bairro">Bairro</label>
-        <input type="text" class="form-control" id="bairro" placeholder="Ex: Bairro Novo Umuarama ">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">Cidade</label>
-        <input type="text" class="form-control" id="cidade">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputEstado">Estado</label>
-        <select id="estado" class="form-control">
-          <option selected>Escolher...</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-          <option value="EX">Estrangeiro</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="cep">
-      </div>
-    </div>
-
-    <button type="submit" style="background-color: #0f3e96" class="btn btn-primary">Cadastrar</button>
-  </form>
+  
+  <h1>Lista de Médicos</h1>
 
   <!-- JavaScript (Opcional) -->
   <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
