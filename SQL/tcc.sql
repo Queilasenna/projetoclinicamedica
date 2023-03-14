@@ -24,57 +24,56 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadasto login`
+-- Estrutura da tabela `login`
 --
 
-CREATE TABLE `cadasto login` (
-  `IDLOG` int(11) NOT NULL,
-  `usuarioLOG` varchar(100) NOT NULL,
-  `senhaLOG` varchar(100) NOT NULL,
-  `emailLOG` int(11) NOT NULL
+CREATE TABLE `login` (
+  `ID` int(11) NOT NULL,
+  `usuario` varchar(100) NOT NULL,
+  `senha` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro medico`
+-- Estrutura da tabela `medicos`
 --
 
-CREATE TABLE `cadastro medico` (
-  `IDMED` int(11) NOT NULL,
-  `nomeMED` varchar(100) NOT NULL,
-  `nascimentoMED` date NOT NULL,
-  `cpfMED` varchar(100) NOT NULL,
-  `emailMED` varchar(100) NOT NULL,
-  `telefoneMED` varchar(100) NOT NULL,
-  `crmMED` varchar(100) NOT NULL,
-  `situacaoMED` varchar(100) NOT NULL,
-  `especialidadeMED` varchar(100) NOT NULL,
-  `ruaMED` varchar(100) NOT NULL,
-  `bairroMED` varchar(100) NOT NULL,
-  `cidadeMED` varchar(100) NOT NULL,
-  `estadoMED` varchar(100) NOT NULL,
-  `cepMED` varchar(100) NOT NULL
+CREATE TABLE `medicos` (
+  `ID` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `nascimento` date NOT NULL,
+  `cpf` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(100) NOT NULL,
+  `crm` varchar(100) NOT NULL,
+  `situacao` varchar(100) NOT NULL,
+  `especialidade` varchar(100) NOT NULL,
+  `rua` varchar(100) NOT NULL,
+  `bairro` varchar(100) NOT NULL,
+  `cidade` varchar(100) NOT NULL,
+  `estado` varchar(100) NOT NULL,
+  `cep` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cadastro paciente`
+-- Estrutura da tabela `pacientes`
 --
 
-CREATE TABLE `cadastro paciente` (
-  `IDPAC` int(11) NOT NULL,
-  `nomePAC` varchar(100) NOT NULL,
-  `nascimentoPAC` date NOT NULL,
-  `cpfPAC` varchar(100) NOT NULL,
-  `emailPAC` varchar(100) NOT NULL,
-  `telefonePAC` varchar(100) NOT NULL,
-  `ruaPAC` varchar(100) NOT NULL,
-  `bairroPAC` varchar(100) NOT NULL,
-  `cidadePAC` varchar(100) NOT NULL,
-  `estadoPAC` varchar(100) NOT NULL,
-  `cepPAC` varchar(100) NOT NULL
+CREATE TABLE `pacientes` (
+  `ID` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `nascimento` date NOT NULL,
+  `cpf` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(100) NOT NULL,
+  `rua` varchar(100) NOT NULL,
+  `bairro` varchar(100) NOT NULL,
+  `cidade` varchar(100) NOT NULL,
+  `estado` varchar(100) NOT NULL,
+  `cep` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -84,20 +83,20 @@ CREATE TABLE `cadastro paciente` (
 --
 -- Índices para tabela `cadasto login`
 --
-ALTER TABLE `cadasto login`
-  ADD PRIMARY KEY (`IDLOG`);
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Índices para tabela `cadastro medico`
 --
-ALTER TABLE `cadastro medico`
-  ADD PRIMARY KEY (`IDMED`);
+ALTER TABLE `medicos`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Índices para tabela `cadastro paciente`
 --
-ALTER TABLE `cadastro paciente`
-  ADD PRIMARY KEY (`IDPAC`);
+ALTER TABLE `pacientes`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -106,20 +105,20 @@ ALTER TABLE `cadastro paciente`
 --
 -- AUTO_INCREMENT de tabela `cadasto login`
 --
-ALTER TABLE `cadasto login`
-  MODIFY `IDLOG` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `login`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `cadastro medico`
 --
-ALTER TABLE `cadastro medico`
-  MODIFY `IDMED` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `medicos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `cadastro paciente`
 --
-ALTER TABLE `cadastro paciente`
-  MODIFY `IDPAC` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pacientes`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

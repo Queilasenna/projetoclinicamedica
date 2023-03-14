@@ -71,10 +71,7 @@ include_once '../conexao.php';
       <div class="dropdown-menu">
         <a class="dropdown-item" href="#">Agendar Consulta</a>
         <a class="dropdown-item" href="#">Pacientes Agendados</a>
-        <!-- <a class="dropdown-item" href="#">Controle de Pacientes</a> -->
-        <!-- <a class="dropdown-item" href="#">Histórico de Consultas</a> -->
-        <!-- <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Documentos</a> -->
+   
       </div>
     </li>
     <li class="nav-item dropdown">

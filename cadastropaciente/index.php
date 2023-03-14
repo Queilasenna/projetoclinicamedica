@@ -1,6 +1,10 @@
+<?php
+session_start();
+include_once '../conexao.php';
+?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -10,9 +14,11 @@
     body {
       margin: 0px;
     }
- h1{
-text-align: center;
-}
+
+    h1 {
+      text-align: center;
+    }
+
     .background {
       width: 100vw;
       height: 100vh;
@@ -25,14 +31,12 @@ text-align: center;
       background-color: #fff;
     }
 
-form {
-margin-left: 15px;
-margin-right: 40px;
+    form {
+      margin-left: 15px;
+      margin-right: 40px;
 
 
-}
-   
-
+    }
   </style>
   <title>Cadastrar Paciente</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -46,144 +50,84 @@ margin-right: 40px;
   <nav class="navbar navbar-light" style="background-color: #0f3e96;">
     <a class="navbar-brand" style="color: #fff" href="../login/home.php">JGPQ</a>
     <form class="form-inline">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" style="color: #fff" href="../login/home.php">Início</a>
-            </li>
-        </ul>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" style="color: #fff" href="../login/home.php">Início</a>
+        </li>
+      </ul>
     </form>
-</nav>
-<!-- FINAL DO MENU AZUL -->
-<br>
-<ul class="nav nav-tabs">
-    
+  </nav>
+  <!-- FINAL DO MENU AZUL -->
+  <br>
+  <ul class="nav nav-tabs">
+
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Cadastro</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="index.php">Cadastrar Paciente</a>
-            <a class="dropdown-item" href="../cadastromedico/index.php">Cadastrar Médico</a>
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+        aria-expanded="false">Cadastro</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="formulario.php">Cadastrar Paciente</a>
+        <a class="dropdown-item" href="../cadastromedico/formulario.php">Cadastrar Médico</a>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Agenda</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="../agenda/agenda.php">Agendar Consulta</a>
-            <a class="dropdown-item" href="#">Pacientes Agendados</a>
-            <!-- <a class="dropdown-item" href="#">Controle de Pacientes</a> -->
-            <!-- <a class="dropdown-item" href="#">Histórico de Consultas</a> -->
-            <!-- <div class="dropdown-divider"></div>
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+        aria-expanded="false">Agenda</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Agendar Consulta</a>
+        <a class="dropdown-item" href="#">Pacientes Agendados</a>
+        <!-- <a class="dropdown-item" href="#">Controle de Pacientes</a> -->
+        <!-- <a class="dropdown-item" href="#">Histórico de Consultas</a> -->
+        <!-- <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Documentos</a> -->
-        </div>
+      </div>
     </li>
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Documentos</a>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Atestado Médico</a>
-            <a class="dropdown-item" href="#">Receita Médica</a>
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+        aria-expanded="false">Documentos</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Atestado Médico</a>
+        <a class="dropdown-item" href="#">Receita Médica</a>
 
     </li>
-</ul>
-<br><h1> Cadastro de Paciente</h1><br><br>
-<!-- FINAL DAS ABAS -->
+  </ul>
+  <br>
+  
+  <h1>Lista de Pacientes</h1>
 
-<form>
-    <div class="form-row">
-      <div class="form-group col-md-5">
-        <label for="nome">Nome Completo</label>
-        <input type="text" class="form-control" id="nome" placeholder="Ex: Patrícia Senna">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="datanasc">Data de Nascimento</label>
-        <input type="date" class="form-control" id="datanasc" placeholder="">
-      </div>
-      <div class="form-group col-md-3">
-        <label for="cpf">CPF</label>
-        <input type="text" class="form-control" id="cpf" placeholder="Ex: 40492175492">
-      </div>
-    </div>
+  <table class="table table-stripped">
+    <tr>
+      <th>#</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Telefone</th>
+      <th></th>
+    </tr>
 
-    <div class="form-row">
-        <div class="form-group col-md-8">
-          <label for="email">E-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="Ex: patricia94@...">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="tel">Telefone</label>
-          <input type="tel" class="form-control" id="tel" placeholder="18 4004-8922 ">
-        </div>
-        
-    </div>
+    <?php
+    $sql = "SELECT * FROM pacientes"; // Cria a sql
+    $resultado = $pdo->query($sql); // Executa no banco
+    $pacientes = $resultado->fetchAll(); // Pega os resultados
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="rua">Rua</label>
-          <input type="text" class="form-control" id="rua" placeholder="Ex: Rua Afonso Pena, nº47 ">
-        </div>
-                <div class="form-group col-md-6">
-            <label for="bairro">Bairro</label>
-            <input type="text" class="form-control" id="bairro" placeholder="Ex: Bairro Novo Umuarama ">
-          </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">Cidade</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputEstado">Estado</label>
-        <select id="inputEstado" class="form-control">
-          <option selected>Escolher...</option>
-          <option value="AC">Acre</option>
-          <option value="AL">Alagoas</option>
-          <option value="AP">Amapá</option>
-          <option value="AM">Amazonas</option>
-          <option value="BA">Bahia</option>
-          <option value="CE">Ceará</option>
-          <option value="DF">Distrito Federal</option>
-          <option value="ES">Espírito Santo</option>
-          <option value="GO">Goiás</option>
-          <option value="MA">Maranhão</option>
-          <option value="MT">Mato Grosso</option>
-          <option value="MS">Mato Grosso do Sul</option>
-          <option value="MG">Minas Gerais</option>
-          <option value="PA">Pará</option>
-          <option value="PB">Paraíba</option>
-          <option value="PR">Paraná</option>
-          <option value="PE">Pernambuco</option>
-          <option value="PI">Piauí</option>
-          <option value="RJ">Rio de Janeiro</option>
-          <option value="RN">Rio Grande do Norte</option>
-          <option value="RS">Rio Grande do Sul</option>
-          <option value="RO">Rondônia</option>
-          <option value="RR">Roraima</option>
-          <option value="SC">Santa Catarina</option>
-          <option value="SP">São Paulo</option>
-          <option value="SE">Sergipe</option>
-          <option value="TO">Tocantins</option>
-          <option value="EX">Estrangeiro</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="inputCEP">
-      </div>
-    </div>
-    
-    <button type="submit" style="background-color: #0f3e96" class="btn btn-primary">Cadastrar</button>
-  </form>
+    foreach ($pacientes as $paciente) { ?>
+      <tr>
+        <td><?= $paciente['id'] ?></td>
+        <td><?= $paciente['nome'] ?></td>
+        <td><?= $paciente['cpf'] ?></td>
+        <td><?= $paciente['telefone'] ?></td>
+        <td><a href="mostrarPaciente.php?id=<?= $paciente['id'] ?>">Editar</a></td>
+      </tr>
+    <?php } ?>
+  </table>
 
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+  <!-- JavaScript (Opcional) -->
+  <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -89,10 +89,7 @@ session_start();
           <button type="submit" class="btn btn-primary" style="margin-top: 20px; background-color: #0f3e96;"> Entrar</button>
           <form method="POST" action="#">    
         </div>
-        <div style="text-align: center;">
-          <form method="POST" action="#"> 
-          <button type="submit" class="btn btn-primary" style="margin-top: 20px; background-color: #0f3e96;">Cadastre-se</button>
-          <p class="text-danger">
+      
 
       <?php
       if (isset($_SESSION['msg'])) {

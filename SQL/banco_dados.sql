@@ -14,3 +14,23 @@ CREATE TABLE medicos (
   estado varchar(100) NOT NULL,
   cep varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE pacientes (
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome varchar(100) NOT NULL,
+  nascimento date NOT NULL,
+  cpf varchar(100) NOT NULL,
+  email varchar(100) NOT NULL,
+  telefone varchar(100) NOT NULL,
+  rua varchar(100) NOT NULL,
+  bairro varchar(100) NOT NULL,
+  cidade varchar(100) NOT NULL,
+  estado varchar(100) NOT NULL,
+  cep varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE login (
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  usuario varchar(100) NOT NULL,
+  senha varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

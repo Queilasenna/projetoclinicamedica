@@ -3,19 +3,19 @@
 session_start();
 include("conexao.php");
 
-$usuarioLOG = filter_input(INPUT_POST, 'usuario', 
+$usuario = filter_input(INPUT_POST, 'usuario', 
 FILTER_SANITIZE_STRING);
-$senhaLOG = filter_input(INPUT_POST, 'senha', 
+$senha = filter_input(INPUT_POST, 'senha', 
 FILTER_SANITIZE_STRING);
 
 $query = $pdo->prepare('SELECT  *
                         FROM    login
-                        WHERE   usuarioLOG = :usuario 
-                        AND     senhaLOG = :senha');
+                        WHERE   usuario = :usuario 
+                        AND     senha = :senha');
                       
 $query->execute(array(
-  ':usuario' => $usuarioLOG,
-  ':senha' => $senhaLOG,
+  ':usuario' => $usuario,
+  ':senha' => $senha,
 ));
 
 if ($query ->rowCount()<> 0) {
